@@ -2,100 +2,184 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className="relative w-full h-screen overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/home.mp4" type="video/mp4"></source>
+        </video>
+        <header className="absolute top-0 right-0 w-full p-4 bg-opacity-60 text-black z-20  ">
+          <nav className="flex flex-col space-y-4 md:space-y-0 md:space-x-8 md:flex-row justify-end">
+            <ul className="flex flex-col space-y-2 md:space-y-0 md:flex-row gap-6 ">
+              <li>
+                <a href="/about" className="text-2xl font-serif  ">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a href="/therapists" className="text-2xl font-serif ">
+                  Therapists
+                </a>
+              </li>
+              <li>
+                <a href="/features" className="text-2xl font-serif ">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-2xl font-serif ">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="mt-56 text-center text-5xl font-bold text-white">
+            Welcome to ZenPathways
+          </div>
+          <div className="text-center text-3xl mt-2 text-white">
+            Unlock the waves to your mental wellness journey today!
+          </div>
+          <div className="flex items-center justify-center">
+            <a href="/features">
+              <button className="mt-12 px-6 py-2 bg-col4 text-black font-semibold rounded shadow-md shadow-col2 hover:bg-col3 transition duration-200">
+                Get started
+              </button>
+            </a>
+          </div>
+        </header>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div>
+        <div className="bg-zinc-950">
+          <div className="flex flex-row">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/about.jpg"
+              alt="coffee"
+              height={900}
+              width={360}
+              className="ml-16 mt-8"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="pt-48 text-center text-5xl font-bold text-white">
+              About Us
+              <div className="text-center text-xl mt-16 ml-4 mr-4 text-white">
+                At ZenPathways, you can connect with experienced therapists,
+                attend virtual therapy sessions from the comfort of your home,
+                and access a range of soothing resources like calming music,
+                uplifting movies, and a personal journal for reflection. Our
+                mission is to provide you with a comprehensive platform for
+                self-care, growth, and healing, guiding you toward a more
+                peaceful, fulfilled life. <br /> <br />
+                Let the waves of wellness carry you forward on your journey to
+                mental well-being.
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+
+      <div className="bg-zinc-950">
+        <div className=" text-center font-bold text-5xl pt-32 pb-16 text-white">
+          Features
+        </div>
+        <div className="flex flex-row p-28 justify-between gap-8 ">
+          <div className="bg-zinc-900 p-8 rounded-lg shadow-md shadow-white hover:scale-110">
+            <Image src="/music.png" alt="music" height={30} width={50} />
+            <div className="text-white text-2xl font-semibold">
+              Music Recommendations
+            </div>
+            <div className="text-white ">
+              Handpicked tunes chosen just for you.
+            </div>
+          </div>
+
+          <div className="bg-zinc-900 p-8 rounded-lg shadow-md shadow-white hover:scale-110">
+            <Image src="/mov.png" alt="music" height={30} width={50} />
+            <div className="text-white text-2xl font-semibold">
+              Movie Recommendations
+            </div>
+            <div className="text-white">
+              Comforting movies for a cozy, relaxing escape.
+            </div>
+          </div>
+          <div className="bg-zinc-900 p-8 rounded-lg shadow-md shadow-white hover:scale-110">
+            <Image src="/diar.png" alt="music" height={30} width={50} />
+            <div className="text-white text-2xl font-semibold">
+              Personal Journal
+            </div>
+            <div className="text-white">
+              Track your thoughts freely, all in one place.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" text-center font-bold text-5xl pt-28 text-white bg-zinc-950">
+        Contact Us
+      </div>
+      <div className="bg-zinc-950 min-h-full flex justify-center items-center p-28">
+        {/* Cards Section */}
+        <div className="flex flex-wrap justify-center gap-8 px-4 items-center">
+          {/* Card 1 */}
+          <div className="bg-zinc-900 border border-black rounded-lg shadow-md shadow-white w-96 h-48 p-7 ">
+            <div className="flex justify-center items-center">
+              <Image width={48} height={48} src="/email.png" alt="new-post" />
+            </div>
+            <h2 className="text-xl font-semibold mb-4 text-white text-center pt-3">
+              Email
+            </h2>
+            <a
+              href="mailto:zenpathways@gmail.com"
+              className="text-white text-center pl-16"
+            >
+              zenpathways@gmail.com
+            </a>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-zinc-900 border border-black rounded-lg shadow-md shadow-white w-96 h-48 p-7">
+            <div className="flex justify-center items-center">
+              <Image width={48} height={48} src="/phone.png" alt="new-post" />
+            </div>
+            <h2 className="text-xl font-semibold mb-4 text-white text-center pt-3">
+              Contact
+            </h2>
+            <a href="tel:9807654321" className="text-white text-center pl-24">
+              +91 9807654321
+            </a>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-zinc-900 border border-black rounded-lg shadow-md shadow-white w-96 h-48 p-7">
+            <div className="flex justify-center items-center">
+              <Image
+                width={48}
+                height={48}
+                src="/location.png"
+                alt="new-post"
+              />
+            </div>
+            <h2 className="text-xl font-semibold mb-4 text-white text-center pt-3">
+              Location
+            </h2>
+            <p className="text-white text-center">
+              Visakhapatnam, Andhra Pradesh
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer className="footer footer-center bg-base-300 text-base-content p-4 bg-zinc-950 justify-center text-center text-white pt-28">
+        <aside>
+          <p>
+            Copyright © {new Date().getFullYear()} - All rights reserved by
+            ZenPathways Ltd
+          </p>
+        </aside>
       </footer>
-    </div>
+    </>
   );
 }
