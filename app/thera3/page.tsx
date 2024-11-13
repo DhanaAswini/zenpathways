@@ -7,7 +7,7 @@ export default function Thera3() {
         <div className="flex items-start justify-center space-x-10 p-10">
           {/* Therapist Information Section */}
           <div className="p-2 md:p-10 w-full md:w-1/2 bg-white bg-opacity-75 h-auto pt-10 pl-10">
-            <div className="text-3xl">I'm Kevin Hughes, LMHC</div>
+            <div className="text-3xl">I am Kevin Hughes, LMHC</div>
             <div className="text-2xl font-semibold mt-2">
               5+ years Experience
             </div>
@@ -36,7 +36,7 @@ export default function Thera3() {
 
           {/* What's Included Section */}
           <div className="p-2 md:p-10 w-full md:w-1/2 bg-white bg-opacity-75 h-auto pt-10 pl-10">
-            <div className="text-4xl font-bold">What's Included?</div>
+            <div className="text-4xl font-bold">What is Included?</div>
             <ul className="mt-6 space-y-4 list-disc list-inside">
               <li className="text-2xl font-semibold">
                 How does anxiety affect your day?
