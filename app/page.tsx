@@ -172,7 +172,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="footer footer-center bg-base-300 text-base-content p-4 bg-zinc-950 justify-center text-center text-white pt-28">
+      <footer className="footer footer-center  p-4 bg-zinc-950 justify-center text-center text-white pt-28">
         <aside>
           <p>
             Copyright © {new Date().getFullYear()} - All rights reserved by
